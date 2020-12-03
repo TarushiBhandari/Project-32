@@ -8,7 +8,6 @@ var base1, base2;
 var b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22;
 var b23,b24,b25,b26,b27,b28;
 var c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15;
-var polygon, polygon_img;
 var thread;
 
 function preload(){
@@ -18,20 +17,11 @@ function preload(){
 function setup() {
   createCanvas(800,800);
   engine = Engine.create();
-    world = engine.world;
-  stroke(255);
-
-}
-
-function draw() {
-  //background(0);  
-  Engine.update(engine);
-
-  polygon= new Polygon(300,200,20);
+  world = engine.world;
+  polygon= new Polygon(500,200,20);
   
-
   thread=new Connector(polygon.body,{x:230,y:315});
-    base1= new Ground(450,600,300,10);
+  base1= new Ground(450,600,300,10);
   base2= new Ground(650,400,230,10);
 
   //creating level1 blue boxes
@@ -101,6 +91,14 @@ function draw() {
   //creating level5 green box for base2
   c15= new GreenBox(640,215,30,40);
 
+
+}
+
+function draw() {
+  background("black");  
+  Engine.update(engine);
+
+ 
  drawSprites();
  base1.display();
  base2.display();
@@ -148,7 +146,8 @@ function draw() {
  c14.display(); 
  c15.display();
  thread.display();
- 
+ polygon.display();
+
 }
 
 function mouseDragged(){

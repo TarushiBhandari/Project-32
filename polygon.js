@@ -14,6 +14,7 @@ class Polygon{
     }
 
     display(){
+        stroke("red");
         imageMode(CENTER);
         image(this.image,this.body.position.x,this.body.position.y,40,40);
     }
