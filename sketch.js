@@ -91,14 +91,13 @@ function setup() {
   //creating level5 green box for base2
   c15= new GreenBox(640,215,30,40);
 
-
 }
 
 function draw() {
   background("black");  
   Engine.update(engine);
 
- 
+
  drawSprites();
  base1.display();
  base2.display();

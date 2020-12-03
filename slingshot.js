@@ -25,7 +25,7 @@ class Connector {
     display(){
 
         if(this.chain.bodyA){
-            stroke(0,255,246);
+            stroke(0,255,245);
             strokeWeight(4);
             line(this.chain.bodyA.position.x,this.chain.bodyA.position.y,this.pointB.x,this.pointB.y);
         }
