@@ -158,8 +158,7 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-  if(keyCode===32)
-  {
+  if(keyCode===32){
     Matter.Body.setPosition(polygon.body,{x:140,y:315});
     thread.attacher(polygon.body);
   }
