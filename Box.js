@@ -16,5 +16,12 @@ display(){
   rectMode(CENTER);
   rect(pos.x, pos.y, this.width, this.height);
 }
+
+score(){
+  if(this.Visibility<0 && this.Visibility>(-105)){
+    score++;
+  }
+}
+
 }
 

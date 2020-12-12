@@ -9,6 +9,7 @@ var b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b
 var b23,b24,b25,b26,b27,b28;
 var c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15;
 var thread;
+var score;
 
 function preload(){
 
@@ -20,6 +21,8 @@ function setup() {
   world = engine.world;
   polygon= new Polygon(500,200,20);
   
+  score= 0;
+
   thread=new Connector(polygon.body,{x:230,y:315});
   base1= new Ground(450,600,300,10);
   base2= new Ground(650,400,230,10);
@@ -102,50 +105,98 @@ function draw() {
  base1.display();
  base2.display();
  b1.display();
+ b1.score();
  b2.display();
+ b2.score();
  b3.display();
+ b3.score();
  b4.display();
+ b4.score();
  b5.display();
+ b5.score();
  b6.display();
+ b6.score();
  b7.display();
+ b7.score();
  b8.display();
+ b8.score();
  b9.display();
+ b9.score();
  b10.display();
+ b10.score();
  b11.display();
+ b11.score();
  b12.display();
+ b12.score();
  b13.display();
+ b13.score();
  b14.display();
+ b14.score();
  b15.display();
+ b15.score();
  b16.display();
+ b16.score();
  b17.display();
+ b17.score();
  b18.display();
+ b18.score();
  b19.display();
+ b19.score();
  b20.display();
+ b20.score();
  b21.display();
+ b21.score();
  b22.display();
+ b22.score();
  b23.display();
+ b23.score();
  b24.display();
+ b24.score();
  b25.display();
+ b25.score();
  b26.display();
+ b26.score();
  b27.display();
+ b27.score();
  b28.display();
+ b28.score();
  c1.display();
+ c1.score();
  c2.display();
+ c2.score();
  c3.display();
+ c3.score();
  c4.display();
+ c4.score();
  c5.display();
+ c5.score();
  c6.display();
+ c6.score();
  c7.display();
+ c7.score();
  c8.display();
+ c8.score();
  c9.display();
+ c9.score();
  c10.display();
+ c10.score();
  c11.display();
+ c11.score();
  c12.display();
+ c12.score();
  c13.display();
+ c13.score();
  c14.display(); 
+ c14.score();
  c15.display();
+ c15.score();
  thread.display();
  polygon.display();
+
+ noStroke();
+ textSize(30);
+ fill("yellow");
+ text("SCORE:" +score, 600,40);
 
 }
 
